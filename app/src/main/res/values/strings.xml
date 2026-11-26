@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Vietnamese (default language). English is in values-en/strings.xml. -->
+<resources>
+    <string name="app_name">Meil Cinema</string>
+
+    <!-- Common -->
+    <string name="action_retry">Thử lại</string>
+    <string name="action_back">Quay lại</string>
+    <string name="action_cancel">Huỷ</string>
+    <string name="action_close">Đóng</string>
+    <string name="action_confirm">Xác nhận</string>
+    <string name="action_save">Lưu thay đổi</string>
+    <string name="action_delete">Xoá</string>
+    <string name="action_send">Gửi</string>
+    <string name="action_see_all">Xem tất cả</string>
+    <string name="action_undo">Hoàn tác</string>
+    <string name="action_clear_all">Xoá tất cả</string>
+    <string name="see_more">Xem thêm</string>
+    <string name="see_less">Thu gọn</string>
+    <string name="rating_cd">Điểm đánh giá</string>
+    <string name="load_more_failed">Không tải thêm được phim.</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">Không kết nối được tới máy chủ phim. Hãy kiểm tra mạng internet rồi thử lại.</string>
+    <string name="error_api_key">Thiếu hoặc sai TMDB API key. Xem README để cài đặt.</string>
+    <string name="error_not_found">Không tìm thấy phim này.</string>
+    <string name="error_too_many">Quá nhiều yêu cầu, vui lòng đợi một chút rồi thử lại.</string>
+    <string name="error_server">Lỗi máy chủ (%1$d). Vui lòng thử lại sau.</string>
+    <string name="error_generic">Đã có lỗi xảy ra. Vui lòng thử lại.</string>
+    <string name="error_movie_load">Không tải được thông tin phim.</string>
+
+    <string name="err_name_empty">Vui lòng nhập họ tên</string>
+    <string name="err_name_short">Họ tên quá ngắn</string>
+    <string name="err_email_empty">Vui lòng nhập email</string>
+    <string name="err_email_invalid">Email không hợp lệ</string>
+    <string name="err_phone_empty">Vui lòng nhập số điện thoại</string>
+    <string name="err_phone_invalid">Số điện thoại không hợp lệ</string>
+    <string name="err_password_empty">Vui lòng nhập mật khẩu</string>
+    <string name="err_password_short">Mật khẩu cần ít nhất %1$d ký tự</string>
+    <string name="err_password_weak">Mật khẩu cần có cả chữ và số</string>
+    <string name="err_confirm_empty">Vui lòng nhập lại mật khẩu</string>
+    <string name="err_confirm_mismatch">Mật khẩu nhập lại không khớp</string>
+    <string name="err_terms">Bạn cần đồng ý với điều khoản sử dụng</string>
+    <string name="err_email_taken">Email này đã được đăng ký</string>
+    <string name="err_wrong_credentials">Email hoặc mật khẩu không đúng</string>
+    <string name="err_wrong_current_password">Mật khẩu hiện tại không đúng</string>
+    <string name="err_same_password">Mật khẩu mới phải khác mật khẩu hiện tại</string>
+    <string name="err_not_logged_in">Vui lòng đăng nhập lại</string>
+    <string name="err_no_seats">Bạn chưa chọn ghế</string>
+    <string name="err_seats_taken">Một số ghế vừa có người đặt, vui lòng chọn lại</string>
+
+    <!-- Navigation -->
+    <string name="tab_home">Trang chủ</string>
+    <string name="tab_search">Tìm kiếm</string>
+    <string name="tab_favorites">Yêu thích</string>
+    <string name="tab_account">Tài khoản</string>
+
+    <!-- Home -->
+    <string name="category_now_playing">Phim đang chiếu</string>
+    <string name="category_upcoming">Phim sắp chiếu</string>
+    <string name="category_popular">Phổ biến</string>
+    <string name="home_greeting">Xin chào, %1$s 👋</string>
+    <string name="home_empty_list">Chưa có phim nào.</string>
+    <string name="badge_now_showing">ĐANG CHIẾU</string>
+    <string name="badge_upcoming">SẮP CHIẾU</string>
+    <string name="book_ticket">Đặt vé</string>
+    <string name="promo1_title">Thứ Ba Vui Vẻ</string>
+    <string name="promo1_subtitle">Đồng giá 50.000đ mọi suất chiếu 2D</string>
+    <string name="promo2_title">Combo Bắp Nước</string>
+    <string name="promo2_subtitle">Giảm 30% khi đặt kèm vé online</string>
+    <string name="promo3_title">Thành Viên Vàng</string>
+    <string name="promo3_subtitle">Giảm đến 15% &amp; suất chiếu sớm độc quyền</string>
+
+    <!-- Auth -->
+    <string name="login_title">Chào mừng trở lại!</string>
+    <string name="login_subtitle">Đăng nhập để đặt vé và tích điểm thành viên</string>
+    <string name="field_email">Email</string>
+    <string name="field_password">Mật khẩu</string>
+    <string name="field_full_name">Họ và tên</string>
+    <string name="field_phone">Số điện thoại</string>
+    <string name="field_confirm_password">Nhập lại mật khẩu</string>
+    <string name="login_button">Đăng nhập</string>
+    <string name="no_account">Chưa có tài khoản?</string>
+    <string name="register_now">Đăng ký ngay</string>
+    <string name="register_title">Tạo tài khoản</string>
+    <string name="register_subtitle">Nhận ngay ưu đãi thành viên mới</string>
+    <string name="accept_terms">Tôi đồng ý với Điều khoản sử dụng và Chính sách bảo mật</string>
+    <string name="register_button">Đăng ký</string>
+    <string name="have_account">Đã có tài khoản?</string>
+    <string name="show_password">Hiện mật khẩu</string>
+    <string name="hide_password">Ẩn mật khẩu</string>
+    <string name="password_strength">Độ mạnh mật khẩu: %1$s</string>
+    <string name="strength_weak">Yếu</string>
+    <string name="strength_medium">Trung bình</string>
+    <string name="strength_good">Khá</string>
+    <string name="strength_strong">Mạnh</string>
+
+    <!-- Detail -->
+    <string name="add_favorite">Thêm vào yêu thích</string>
+    <string name="remove_favorite">Bỏ yêu thích</string>
+    <string name="release_on">Khởi chiếu %1$s</string>
+    <string name="synopsis">Nội dung phim</string>
+    <string name="no_synopsis">Chưa có mô tả cho phim này.</string>
+    <string name="booking_bar_early">Suất chiếu sớm</string>
+    <string name="booking_bar_open">Đang mở bán vé</string>
+    <string name="booking_bar_early_sub">Vé đặc biệt trước ngày %1$s</string>
+    <string name="booking_bar_price">Chỉ từ %1$s</string>
+    <string name="book_early">Đặt suất sớm</string>
+
+    <!-- Reviews -->
+    <string name="reviews_title">Đánh giá</string>
+    <string name="write_review">Viết đánh giá</string>
+    <string name="edit_review">Sửa đánh giá của bạn</string>
+    <string name="reviews_loading">Đang tải đánh giá…</string>
+    <string name="reviews_empty">Chưa có đánh giá nào. Hãy là người đầu tiên!</string>
+    <string name="reviews_show_all">Xem tất cả %1$d đánh giá</string>
+    <string name="votes_tmdb">%1$d lượt • TMDB</string>
+    <string name="app_reviews_none">Chưa có đánh giá trong app</string>
+    <string name="app_reviews_avg">%1$s/5 từ %2$d khán giả Meil Cinema</string>
+    <string name="review_you">%1$s (Bạn)</string>
+    <string name="review_anonymous">Ẩn danh</string>
+    <string name="review_dialog_title">Đánh giá phim</string>
+    <string name="review_hint">Cảm nhận của bạn</string>
+    <string name="star_cd">%1$d sao</string>
+    <string name="star_0">Chọn số sao</string>
+    <string name="star_1">Rất tệ</string>
+    <string name="star_2">Tệ</string>
+    <string name="star_3">Bình thường</string>
+    <string name="star_4">Hay</string>
+    <string name="star_5">Tuyệt vời!</string>
+
+    <!-- Booking -->
+    <string name="booking_title">Đặt vé</string>
+    <string name="booking_early_banner">⭐ Suất chiếu sớm trước ngày khởi chiếu – vé được tính là vé đặc biệt</string>
+    <string name="step_cinema">1. Chọn rạp</string>
+    <string name="step_date">2. Chọn ngày</string>
+    <string name="step_time">3. Chọn suất chiếu</string>
+    <string name="step_format">4. Định dạng</string>
+    <string name="step_seats">5. Chọn ghế</string>
+    <string name="no_showtimes">Hôm nay đã hết suất chiếu, vui lòng chọn ngày khác.</string>
+    <string name="screen_label">MÀN HÌNH</string>
+    <string name="seat_standard">Thường</string>
+    <string name="seat_vip">VIP</string>
+    <string name="seat_sweetbox">Sweetbox (đôi)</string>
+    <string name="legend_price">%1$s %2$s</string>
+    <string name="legend_sweetbox">Sweetbox %1$s/ghế</string>
+    <string name="legend_selected">Đang chọn</string>
+    <string name="legend_taken">Đã bán</string>
+    <string name="no_seat_selected">Chưa chọn ghế</string>
+    <string name="seats_label">Ghế: %1$s</string>
+    <string name="discount_applied">Đã giảm %1$s (hạng %2$s -%3$d%%)</string>
+    <string name="pay">Thanh toán</string>
+    <string name="confirm_booking_title">Xác nhận đặt vé</string>
+    <string name="label_movie">Phim</string>
+    <string name="label_cinema">Rạp</string>
+    <string name="label_showtime">Suất chiếu</string>
+    <string name="label_format">Định dạng</string>
+    <string name="label_seats">Ghế</string>
+    <string name="label_special">Vé đặc biệt</string>
+    <string name="label_subtotal">Tạm tính</string>
+    <string name="label_tier_discount">Ưu đãi %1$s</string>
+    <string name="label_total">Tổng cộng</string>
+    <string name="label_paid">Thanh toán</string>
+    <string name="label_points">Điểm</string>
+    <string name="label_booked_on">Ngày đặt</string>
+    <string name="points_will_earn">Bạn sẽ nhận được +%1$d điểm thành viên</string>
+    <string name="booking_success">Đặt vé thành công!</string>
+    <string name="ticket_code">Mã vé: %1$s</string>
+    <string name="booking_summary_line">%1$s • %2$s • Ghế %3$s</string>
+    <string name="points_earned">+%1$d điểm thành viên</string>
+    <string name="view_my_tickets">Xem vé của tôi</string>
+    <string name="max_seats">Mỗi đơn tối đa %1$d ghế</string>
+    <string name="tag_early">Suất chiếu sớm</string>
+    <string name="tag_imax">IMAX</string>
+    <string name="tag_vip">Ghế VIP</string>
+    <string name="tag_sweetbox">Sweetbox</string>
+
+    <!-- Membership tiers -->
+    <string name="tier_member">Thành viên</string>
+    <string name="tier_silver">Bạc</string>
+    <string name="tier_gold">Vàng</string>
+    <string name="tier_diamond">Kim cương</string>
+    <string name="benefit_member_1">Tích 1 điểm cho mỗi 1.000đ</string>
+    <string name="benefit_member_2">Nhận ưu đãi sinh nhật</string>
+    <string name="benefit_silver_1">Giảm 5% mọi đơn đặt vé</string>
+    <string name="benefit_silver_2">Ưu tiên chọn ghế VIP</string>
+    <string name="benefit_silver_3">Tặng 1 bắp nhỏ dịp sinh nhật</string>
+    <string name="benefit_gold_1">Giảm 10% mọi đơn đặt vé</string>
+    <string name="benefit_gold_2">Đặt vé suất chiếu sớm trước 24h</string>
+    <string name="benefit_gold_3">Tặng combo bắp nước sinh nhật</string>
+    <string name="benefit_diamond_1">Giảm 15% mọi đơn đặt vé</string>
+    <string name="benefit_diamond_2">Miễn phí nâng cấp IMAX 2 lần/tháng</string>
+    <string name="benefit_diamond_3">Phòng chờ riêng &amp; quầy ưu tiên</string>
+
+    <!-- Profile -->
+    <string name="member_since">Thành viên từ %1$s</string>
+    <string name="current_tier">Hạng hiện tại</string>
+    <string name="points_unit">điểm</string>
+    <string name="top_tier">Bạn đã đạt hạng cao nhất 🎉 Giảm %1$d%% mọi đơn</string>
+    <string name="to_next_tier">Còn %1$s điểm để lên hạng %2$s (giảm %3$d%%)</string>
+    <string name="journey_title">Hành trình điện ảnh của bạn</string>
+    <string name="stat_tickets">Vé đã đặt</string>
+    <string name="stat_watched">Phim đã xem</string>
+    <string name="stat_special">Vé đặc biệt</string>
+    <string name="stat_points">Điểm tích luỹ</string>
+    <string name="total_spent_since">Tổng chi tiêu từ %1$s</string>
+    <string name="bookings_summary">%1$d lần đặt • lần đầu %2$s</string>
+    <string name="no_bookings_yet">Bạn chưa đặt vé nào – đặt ngay để tích điểm!</string>
+    <string name="chart_title">Số vé 6 tháng gần đây</string>
+    <string name="section_tools">Tiện ích</string>
+    <string name="section_settings">Cài đặt</string>
+    <string name="menu_my_tickets">Vé của tôi</string>
+    <string name="menu_my_tickets_sub">%1$d vé sắp chiếu • %2$d đơn</string>
+    <string name="menu_special">Vé đặc biệt</string>
+    <string name="menu_special_sub">IMAX, ghế VIP, Sweetbox, suất chiếu sớm</string>
+    <string name="menu_membership">Chương trình thành viên</string>
+    <string name="menu_membership_sub">Hạng %1$s • %2$s điểm</string>
+    <string name="menu_change_password">Đổi mật khẩu</string>
+    <string name="menu_change_password_sub">Cập nhật mật khẩu đăng nhập</string>
+    <string name="menu_language">Ngôn ngữ</string>
+    <string name="menu_logout">Đăng xuất</string>
+    <string name="logout_title">Đăng xuất?</string>
+    <string name="logout_message">Bạn có chắc muốn đăng xuất khỏi tài khoản này?</string>
+    <string name="language_dialog_title">Chọn ngôn ngữ</string>
+
+    <!-- Change password -->
+    <string name="change_password_title">Đổi mật khẩu</string>
+    <string name="change_password_hint">Mật khẩu mới cần ít nhất 6 ký tự, gồm cả chữ và số.</string>
+    <string name="field_current_password">Mật khẩu hiện tại</string>
+    <string name="field_new_password">Mật khẩu mới</string>
+    <string name="field_confirm_new_password">Nhập lại mật khẩu mới</string>
+    <string name="password_changed">Đổi mật khẩu thành công!</string>
+
+    <!-- Tickets -->
+    <string name="tickets_title">Vé của tôi</string>
+    <string name="special_tickets_title">Vé đặc biệt</string>
+    <string name="tab_upcoming_count">Sắp chiếu (%1$d)</string>
+    <string name="tab_watched_count">Đã xem (%1$d)</string>
+    <string name="empty_special">Chưa có vé đặc biệt.\nChọn IMAX, ghế VIP, Sweetbox hoặc suất chiếu sớm để sở hữu vé đặc biệt!</string>
+    <string name="empty_upcoming">Bạn chưa có vé sắp chiếu.\nHãy chọn một bộ phim và đặt vé ngay!</string>
+    <string name="empty_watched">Chưa có vé nào đã xem.</string>
+    <string name="special_info">✨ Vé đặc biệt gồm: suất chiếu sớm, phòng IMAX, ghế VIP và ghế đôi Sweetbox.</string>
+    <string name="ticket_code_label">Mã vé</string>
+    <string name="ticket_used">Đã sử dụng</string>
+    <string name="points_plus">+%1$d điểm</string>
+    <string name="ticket_seats_line">Ghế %1$s • %2$s</string>
+    <string name="show_code_hint">Đưa mã này cho nhân viên soát vé</string>
+    <string name="view_movie">Xem phim</string>
+
+    <!-- Membership screen -->
+    <string name="membership_title">Chương trình thành viên</string>
+    <string name="tiers_title">Các hạng thành viên</string>
+    <string name="your_tier">Hạng của bạn</string>
+    <string name="tier_default">Mặc định khi đăng ký</string>
+    <string name="tier_from">Từ %1$s điểm</string>
+    <string name="tier_name">Hạng %1$s</string>
+    <string name="earn_title">Cách tích điểm</string>
+    <string name="earn_1">• Mỗi 1.000đ thanh toán = 1 điểm</string>
+    <string name="earn_2">• Điểm được cộng ngay khi đặt vé thành công</string>
+    <string name="earn_3">• Hạng được xét theo tổng điểm từ khi đăng ký</string>
+    <string name="earn_4">• Ưu đãi giảm giá của hạng được áp dụng tự động khi thanh toán</string>
+    <string name="points_history">Lịch sử tích điểm</string>
+
+    <!-- Search -->
+    <string name="search_title">Tìm kiếm</string>
+    <string name="search_hint">Tìm phim theo tên</string>
+    <string name="clear_search">Xoá tìm kiếm</string>
+    <string name="search_recent">Tìm kiếm gần đây</string>
+    <string name="search_trending">Đang hot 🔥</string>
+    <string name="search_empty_prompt">Nhập tên phim ở ô phía trên để tìm kiếm.</string>
+    <string name="search_no_results">Không tìm thấy phim nào cho \"%1$s\".</string>
+    <string name="search_results_for">Kết quả cho \"%1$s\"</string>
+    <string name="remove_item">Xoá khỏi lịch sử</string>
+
+    <!-- Favorites -->
+    <string name="favorites_title">Yêu thích</string>
+    <string name="favorites_empty">Chưa có phim yêu thích.\nNhấn biểu tượng trái tim ở trang phim để lưu. Phim đã lưu có thể xem khi offline.</string>
+    <string name="favorites_count">%1$d phim</string>
+    <string name="sort_recent">Mới thêm</string>
+    <string name="sort_rating">Điểm cao</string>
+    <string name="sort_title">Tên A–Z</string>
+    <string name="removed_from_favorites">Đã xoá \"%1$s\" khỏi yêu thích</string>
+    <string name="clear_favorites_title">Xoá tất cả phim yêu thích?</string>
+    <string name="clear_favorites_message">Danh sách yêu thích của bạn sẽ bị xoá và không thể khôi phục.</string>
+
+    <!-- QR payment -->
+    <string name="pay_with_qr">Thanh toán QR</string>
+    <string name="pay_qr_title">Thanh toán bằng mã QR</string>
+    <string name="pay_qr_hint">Mở ứng dụng ngân hàng hoặc ví điện tử và quét mã để thanh toán</string>
+    <string name="pay_qr_expires_in">Mã hết hạn sau %1$s</string>
+    <string name="pay_qr_expired">Mã QR đã hết hạn</string>
+    <string name="pay_qr_renew">Tạo mã mới</string>
+    <string name="pay_qr_done">Tôi đã thanh toán</string>
+    <string name="pay_qr_verifying">Đang xác nhận…</string>
+    <string name="pay_qr_demo">Chế độ demo: chưa cấu hình tài khoản nhận tiền nên mã QR chỉ để minh hoạ.</string>
+    <string name="label_bank">Ngân hàng</string>
+    <string name="label_account_no">Số tài khoản</string>
+    <string name="label_account_name">Chủ tài khoản</string>
+    <string name="label_transfer_note">Nội dung CK</string>
+    <string name="action_copy">Sao chép</string>
+</resources>

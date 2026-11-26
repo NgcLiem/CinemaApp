@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common -->
+    <string name="action_retry">Retry</string>
+    <string name="action_back">Back</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_save">Save changes</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_send">Submit</string>
+    <string name="action_see_all">See all</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_clear_all">Clear all</string>
+    <string name="see_more">Read more</string>
+    <string name="see_less">Show less</string>
+    <string name="rating_cd">Rating</string>
+    <string name="load_more_failed">Couldn\'t load more movies.</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">No internet connection. Please check your network and try again.</string>
+    <string name="error_api_key">Invalid or missing TMDB API key. See the README to set it up.</string>
+    <string name="error_not_found">This movie could not be found.</string>
+    <string name="error_too_many">Too many requests. Please wait a moment and try again.</string>
+    <string name="error_server">Server error (%1$d). Please try again later.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_movie_load">Couldn\'t load the movie.</string>
+
+    <string name="err_name_empty">Please enter your name</string>
+    <string name="err_name_short">Name is too short</string>
+    <string name="err_email_empty">Please enter your email</string>
+    <string name="err_email_invalid">Invalid email address</string>
+    <string name="err_phone_empty">Please enter your phone number</string>
+    <string name="err_phone_invalid">Invalid phone number</string>
+    <string name="err_password_empty">Please enter a password</string>
+    <string name="err_password_short">Password must be at least %1$d characters</string>
+    <string name="err_password_weak">Password must contain letters and numbers</string>
+    <string name="err_confirm_empty">Please confirm your password</string>
+    <string name="err_confirm_mismatch">Passwords do not match</string>
+    <string name="err_terms">You must accept the terms of use</string>
+    <string name="err_email_taken">This email is already registered</string>
+    <string name="err_wrong_credentials">Incorrect email or password</string>
+    <string name="err_wrong_current_password">Current password is incorrect</string>
+    <string name="err_same_password">The new password must be different from the current one</string>
+    <string name="err_not_logged_in">Please sign in again</string>
+    <string name="err_no_seats">Please choose your seats</string>
+    <string name="err_seats_taken">Some seats were just taken, please choose again</string>
+
+    <!-- Navigation -->
+    <string name="tab_home">Home</string>
+    <string name="tab_search">Search</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_account">Account</string>
+
+    <!-- Home -->
+    <string name="category_now_playing">Now playing</string>
+    <string name="category_upcoming">Coming soon</string>
+    <string name="category_popular">Popular</string>
+    <string name="home_greeting">Hi, %1$s 👋</string>
+    <string name="home_empty_list">No movies yet.</string>
+    <string name="badge_now_showing">NOW SHOWING</string>
+    <string name="badge_upcoming">COMING SOON</string>
+    <string name="book_ticket">Book</string>
+    <string name="promo1_title">Happy Tuesday</string>
+    <string name="promo1_subtitle">All 2D shows for just 50,000đ</string>
+    <string name="promo2_title">Popcorn Combo</string>
+    <string name="promo2_subtitle">30% off when added to an online booking</string>
+    <string name="promo3_title">Gold Members</string>
+    <string name="promo3_subtitle">Up to 15% off &amp; exclusive early screenings</string>
+
+    <!-- Auth -->
+    <string name="login_title">Welcome back!</string>
+    <string name="login_subtitle">Sign in to book tickets and earn member points</string>
+    <string name="field_email">Email</string>
+    <string name="field_password">Password</string>
+    <string name="field_full_name">Full name</string>
+    <string name="field_phone">Phone number</string>
+    <string name="field_confirm_password">Confirm password</string>
+    <string name="login_button">Sign in</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="register_now">Sign up</string>
+    <string name="register_title">Create account</string>
+    <string name="register_subtitle">Get your new member rewards today</string>
+    <string name="accept_terms">I agree to the Terms of Use and Privacy Policy</string>
+    <string name="register_button">Sign up</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="password_strength">Password strength: %1$s</string>
+    <string name="strength_weak">Weak</string>
+    <string name="strength_medium">Fair</string>
+    <string name="strength_good">Good</string>
+    <string name="strength_strong">Strong</string>
+
+    <!-- Detail -->
+    <string name="add_favorite">Add to favorites</string>
+    <string name="remove_favorite">Remove from favorites</string>
+    <string name="release_on">Release %1$s</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="no_synopsis">No overview available.</string>
+    <string name="booking_bar_early">Early screening</string>
+    <string name="booking_bar_open">Tickets on sale</string>
+    <string name="booking_bar_early_sub">Special tickets before %1$s</string>
+    <string name="booking_bar_price">From %1$s</string>
+    <string name="book_early">Book early</string>
+
+    <!-- Reviews -->
+    <string name="reviews_title">Reviews</string>
+    <string name="write_review">Write a review</string>
+    <string name="edit_review">Edit your review</string>
+    <string name="reviews_loading">Loading reviews…</string>
+    <string name="reviews_empty">No reviews yet. Be the first!</string>
+    <string name="reviews_show_all">Show all %1$d reviews</string>
+    <string name="votes_tmdb">%1$d votes • TMDB</string>
+    <string name="app_reviews_none">No in-app reviews yet</string>
+    <string name="app_reviews_avg">%1$s/5 from %2$d Meil Cinema viewers</string>
+    <string name="review_you">%1$s (You)</string>
+    <string name="review_anonymous">Anonymous</string>
+    <string name="review_dialog_title">Rate this movie</string>
+    <string name="review_hint">Your thoughts</string>
+    <string name="star_cd">%1$d stars</string>
+    <string name="star_0">Choose a rating</string>
+    <string name="star_1">Awful</string>
+    <string name="star_2">Bad</string>
+    <string name="star_3">Okay</string>
+    <string name="star_4">Good</string>
+    <string name="star_5">Amazing!</string>
+
+    <!-- Booking -->
+    <string name="booking_title">Book tickets</string>
+    <string name="booking_early_banner">⭐ Early screening before the release date – counts as a special ticket</string>
+    <string name="step_cinema">1. Choose a cinema</string>
+    <string name="step_date">2. Choose a date</string>
+    <string name="step_time">3. Choose a showtime</string>
+    <string name="step_format">4. Format</string>
+    <string name="step_seats">5. Choose seats</string>
+    <string name="no_showtimes">No more shows today, please pick another date.</string>
+    <string name="screen_label">SCREEN</string>
+    <string name="seat_standard">Standard</string>
+    <string name="seat_vip">VIP</string>
+    <string name="seat_sweetbox">Sweetbox (couple)</string>
+    <string name="legend_price">%1$s %2$s</string>
+    <string name="legend_sweetbox">Sweetbox %1$s/seat</string>
+    <string name="legend_selected">Selected</string>
+    <string name="legend_taken">Sold</string>
+    <string name="no_seat_selected">No seats selected</string>
+    <string name="seats_label">Seats: %1$s</string>
+    <string name="discount_applied">Saved %1$s (%2$s tier -%3$d%%)</string>
+    <string name="pay">Pay</string>
+    <string name="confirm_booking_title">Confirm booking</string>
+    <string name="label_movie">Movie</string>
+    <string name="label_cinema">Cinema</string>
+    <string name="label_showtime">Showtime</string>
+    <string name="label_format">Format</string>
+    <string name="label_seats">Seats</string>
+    <string name="label_special">Special</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_tier_discount">%1$s discount</string>
+    <string name="label_total">Total</string>
+    <string name="label_paid">Paid</string>
+    <string name="label_points">Points</string>
+    <string name="label_booked_on">Booked on</string>
+    <string name="points_will_earn">You will earn +%1$d member points</string>
+    <string name="booking_success">Booking confirmed!</string>
+    <string name="ticket_code">Ticket code: %1$s</string>
+    <string name="booking_summary_line">%1$s • %2$s • Seats %3$s</string>
+    <string name="points_earned">+%1$d member points</string>
+    <string name="view_my_tickets">View my tickets</string>
+    <string name="max_seats">Up to %1$d seats per order</string>
+    <string name="tag_early">Early screening</string>
+    <string name="tag_imax">IMAX</string>
+    <string name="tag_vip">VIP seats</string>
+    <string name="tag_sweetbox">Sweetbox</string>
+
+    <!-- Membership tiers -->
+    <string name="tier_member">Member</string>
+    <string name="tier_silver">Silver</string>
+    <string name="tier_gold">Gold</string>
+    <string name="tier_diamond">Diamond</string>
+    <string name="benefit_member_1">Earn 1 point for every 1,000đ</string>
+    <string name="benefit_member_2">Birthday offer</string>
+    <string name="benefit_silver_1">5% off every booking</string>
+    <string name="benefit_silver_2">Priority VIP seat selection</string>
+    <string name="benefit_silver_3">Free small popcorn on your birthday</string>
+    <string name="benefit_gold_1">10% off every booking</string>
+    <string name="benefit_gold_2">Book early screenings 24h ahead</string>
+    <string name="benefit_gold_3">Free birthday popcorn combo</string>
+    <string name="benefit_diamond_1">15% off every booking</string>
+    <string name="benefit_diamond_2">2 free IMAX upgrades per month</string>
+    <string name="benefit_diamond_3">Private lounge &amp; priority counter</string>
+
+    <!-- Profile -->
+    <string name="member_since">Member since %1$s</string>
+    <string name="current_tier">Current tier</string>
+    <string name="points_unit">points</string>
+    <string name="top_tier">You\'ve reached the top tier 🎉 %1$d%% off every order</string>
+    <string name="to_next_tier">%1$s more points to reach %2$s (%3$d%% off)</string>
+    <string name="journey_title">Your movie journey</string>
+    <string name="stat_tickets">Tickets booked</string>
+    <string name="stat_watched">Movies watched</string>
+    <string name="stat_special">Special tickets</string>
+    <string name="stat_points">Points earned</string>
+    <string name="total_spent_since">Total spent since %1$s</string>
+    <string name="bookings_summary">Bookings: %1$d • first on %2$s</string>
+    <string name="no_bookings_yet">No bookings yet – book now to earn points!</string>
+    <string name="chart_title">Tickets in the last 6 months</string>
+    <string name="section_tools">Shortcuts</string>
+    <string name="section_settings">Settings</string>
+    <string name="menu_my_tickets">My tickets</string>
+    <string name="menu_my_tickets_sub">%1$d upcoming tickets • %2$d orders</string>
+    <string name="menu_special">Special tickets</string>
+    <string name="menu_special_sub">IMAX, VIP seats, Sweetbox, early screenings</string>
+    <string name="menu_membership">Membership</string>
+    <string name="menu_membership_sub">%1$s tier • %2$s points</string>
+    <string name="menu_change_password">Change password</string>
+    <string name="menu_change_password_sub">Update your sign-in password</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_logout">Sign out</string>
+    <string name="logout_title">Sign out?</string>
+    <string name="logout_message">Are you sure you want to sign out of this account?</string>
+    <string name="language_dialog_title">Choose language</string>
+
+    <!-- Change password -->
+    <string name="change_password_title">Change password</string>
+    <string name="change_password_hint">The new password needs at least 6 characters, with letters and numbers.</string>
+    <string name="field_current_password">Current password</string>
+    <string name="field_new_password">New password</string>
+    <string name="field_confirm_new_password">Confirm new password</string>
+    <string name="password_changed">Password changed!</string>
+
+    <!-- Tickets -->
+    <string name="tickets_title">My tickets</string>
+    <string name="special_tickets_title">Special tickets</string>
+    <string name="tab_upcoming_count">Upcoming (%1$d)</string>
+    <string name="tab_watched_count">Watched (%1$d)</string>
+    <string name="empty_special">No special tickets yet.\nChoose IMAX, VIP seats, Sweetbox or an early screening to get one!</string>
+    <string name="empty_upcoming">You have no upcoming tickets.\nPick a movie and book now!</string>
+    <string name="empty_watched">No watched tickets yet.</string>
+    <string name="special_info">✨ Special tickets: early screenings, IMAX, VIP seats and Sweetbox couple seats.</string>
+    <string name="ticket_code_label">Code</string>
+    <string name="ticket_used">Used</string>
+    <string name="points_plus">+%1$d pts</string>
+    <string name="ticket_seats_line">Seats %1$s • %2$s</string>
+    <string name="show_code_hint">Show this code at the entrance</string>
+    <string name="view_movie">View movie</string>
+
+    <!-- Membership screen -->
+    <string name="membership_title">Membership</string>
+    <string name="tiers_title">Membership tiers</string>
+    <string name="your_tier">Your tier</string>
+    <string name="tier_default">Default on sign-up</string>
+    <string name="tier_from">From %1$s points</string>
+    <string name="tier_name">%1$s tier</string>
+    <string name="earn_title">How to earn points</string>
+    <string name="earn_1">• Every 1,000đ paid = 1 point</string>
+    <string name="earn_2">• Points are added as soon as the booking succeeds</string>
+    <string name="earn_3">• Your tier depends on all points earned since you signed up</string>
+    <string name="earn_4">• The tier discount is applied automatically at checkout</string>
+    <string name="points_history">Points history</string>
+
+    <!-- Search -->
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search movies by title</string>
+    <string name="clear_search">Clear search</string>
+    <string name="search_recent">Recent searches</string>
+    <string name="search_trending">Trending now 🔥</string>
+    <string name="search_empty_prompt">Type a movie title above to search.</string>
+    <string name="search_no_results">No movies found for \"%1$s\".</string>
+    <string name="search_results_for">Results for \"%1$s\"</string>
+    <string name="remove_item">Remove from history</string>
+
+    <!-- Favorites -->
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_empty">No favorites yet.\nTap the heart on a movie to save it here. Saved movies are available offline.</string>
+    <string name="favorites_count">Movies: %1$d</string>
+    <string name="sort_recent">Recently added</string>
+    <string name="sort_rating">Top rated</string>
+    <string name="sort_title">Title A–Z</string>
+    <string name="removed_from_favorites">Removed \"%1$s\" from favorites</string>
+    <string name="clear_favorites_title">Clear all favorites?</string>
+    <string name="clear_favorites_message">Your favorites list will be deleted and cannot be restored.</string>
+
+    <!-- QR payment -->
+    <string name="pay_with_qr">Pay via QR</string>
+    <string name="pay_qr_title">Pay with QR code</string>
+    <string name="pay_qr_hint">Open your banking or e-wallet app and scan the code to pay</string>
+    <string name="pay_qr_expires_in">Code expires in %1$s</string>
+    <string name="pay_qr_expired">QR code expired</string>
+    <string name="pay_qr_renew">New code</string>
+    <string name="pay_qr_done">I have paid</string>
+    <string name="pay_qr_verifying">Verifying…</string>
+    <string name="pay_qr_demo">Demo mode: no receiving account is configured, so this QR code is for illustration only.</string>
+    <string name="label_bank">Bank</string>
+    <string name="label_account_no">Account no.</string>
+    <string name="label_account_name">Account name</string>
+    <string name="label_transfer_note">Transfer note</string>
+    <string name="action_copy">Copy</string>
+</resources>

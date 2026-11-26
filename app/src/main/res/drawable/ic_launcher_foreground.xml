@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A simple film-strip clapper icon, drawn inside the 66dp safe zone of a 108dp adaptive icon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Clapper body -->
+    <path
+        android:fillColor="#FFC94D"
+        android:pathData="M32,48h44v26a4,4 0,0 1,-4 4H36a4,4 0,0 1,-4 -4z" />
+    <!-- Clapper top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,36.5l42,-7.5l1.6,8.9l-42,7.5z" />
+    <!-- Play triangle -->
+    <path
+        android:fillColor="#1B1B2F"
+        android:pathData="M49,54v16l13,-8z" />
+</vector>

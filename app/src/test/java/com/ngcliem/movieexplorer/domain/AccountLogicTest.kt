@@ -1,6 +1,5 @@
 package com.ngcliem.movieexplorer.domain
 
-import com.ngcliem.movieexplorer.data.auth.PasswordHasher
 import com.ngcliem.movieexplorer.domain.model.Booking
 import com.ngcliem.movieexplorer.domain.model.MemberTier
 import com.ngcliem.movieexplorer.domain.model.ReleaseStatus
@@ -15,8 +14,6 @@ import com.ngcliem.movieexplorer.domain.model.pointsFor
 import com.ngcliem.movieexplorer.domain.model.releaseStatusOf
 import com.ngcliem.movieexplorer.domain.validation.AuthValidator
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
@@ -69,17 +66,6 @@ class AccountLogicTest {
     fun `confirm password must match`() {
         assertNull(AuthValidator.validateConfirm("abc123", "abc123"))
         assertNotNull(AuthValidator.validateConfirm("abc123", "abc124"))
-    }
-
-    // --- Password hashing -------------------------------------------------
-
-    @Test
-    fun `hashed password verifies only with the right password`() {
-        val salt = PasswordHasher.newSalt()
-        val hash = PasswordHasher.hash("secret123", salt)
-        assertNotEquals("secret123", hash)
-        assertTrue(PasswordHasher.verify("secret123", salt, hash))
-        assertFalse(PasswordHasher.verify("secret124", salt, hash))
     }
 
     // --- Membership -------------------------------------------------------
@@ -169,7 +155,7 @@ class AccountLogicTest {
         bookedAt: Long,
         tags: List<SpecialTag>,
     ) = Booking(
-        id = id,
+        id = id.toString(),
         code = "MX$id",
         movieId = movieId,
         movieTitle = "Movie $movieId",

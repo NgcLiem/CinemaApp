@@ -1,0 +1,62 @@
+rules_version = '2';
+
+// Paste into Firebase console > Firestore Database > Rules, then Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // Profile, tickets and favorites: only the owner can read or write them.
+    match /users/{uid} {
+      allow read, write: if isOwner(uid);
+
+      match /bookings/{bookingId} {
+        allow read: if isOwner(uid);
+        // Tickets cannot be edited or deleted once bought.
+        allow create: if isOwner(uid) && request.resource.data.userId == uid;
+        allow update, delete: if false;
+      }
+
+      match /favorites/{movieId} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // Parent of the reviews; only holds the movie id and the time of the last review.
+    match /movies/{movieId} {
+      allow read: if true;
+      allow create, update: if signedIn()
+        && request.resource.data.keys().hasOnly(['movieId', 'lastReviewAt']);
+      allow delete: if false;
+    }
+
+    // Reviews are public; each user writes only the document named after their uid.
+    match /movies/{movieId}/reviews/{uid} {
+      allow read: if true;
+      allow create, update: if isOwner(uid)
+        && request.resource.data.userId == uid
+        && request.resource.data.rating is int
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5
+        && request.resource.data.content is string
+        && request.resource.data.content.size() <= 2000;
+      allow delete: if isOwner(uid);
+    }
+
+    // Seats sold for each showing: anyone signed in can see them and add seats,
+    // but no one can free a seat that was already sold.
+    match /showings/{showingId} {
+      allow read: if signedIn();
+      allow create: if signedIn();
+      allow update: if signedIn()
+        && request.resource.data.seats.hasAll(resource.data.seats);
+      allow delete: if false;
+    }
+  }
+}

@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    // Reads app/google-services.json (downloaded from the Firebase console).
+    alias(libs.plugins.google.services)
 }
 
 // The TMDB API key is read from local.properties (never committed) or from an
@@ -107,7 +109,13 @@ dependencies {
     implementation(libs.okhttp.dnsoverhttps)
     implementation(libs.kotlinx.serialization.json)
 
-    // Local database
+    // Firebase: accounts (Auth) and user data (Firestore)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.kotlinx.coroutines.play.services)
+
+    // Local database (offline cache of the home sections only)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)

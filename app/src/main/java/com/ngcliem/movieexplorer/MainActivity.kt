@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // Read once: the session is stored synchronously in SharedPreferences.
+        // Read once: Firebase restores the saved session synchronously.
         val isLoggedIn = authRepository.isLoggedIn()
         setContent {
             MovieExplorerTheme {

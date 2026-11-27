@@ -34,7 +34,8 @@ enum class ScreenFormat(val label: String, val surcharge: Long, val isSpecial: B
 
 /** A booked ticket order. One booking can hold several seats. */
 data class Booking(
-    val id: Long,
+    /** Firestore document id. */
+    val id: String,
     val code: String,
     val movieId: Int,
     val movieTitle: String,

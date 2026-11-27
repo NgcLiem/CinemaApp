@@ -15,13 +15,15 @@ import kotlinx.coroutines.CancellationException
  */
 class MoviePagingSource(
     private val loadPage: suspend (page: Int) -> MovieListResponseDto,
+    /** Optional post-processing of each loaded page (e.g. replacing unreadable titles). */
+    private val transform: suspend (List<Movie>) -> List<Movie> = { it },
 ) : PagingSource<Int, Movie>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
         val page = params.key ?: FIRST_PAGE
         return try {
             val response = loadPage(page)
-            val movies = response.results.map { it.toDomain() }
+            val movies = transform(response.results.map { it.toDomain() })
             // TMDB never returns more than 500 pages, even if total_pages is higher.
             val lastPage = minOf(response.totalPages, MAX_PAGE)
             LoadResult.Page(

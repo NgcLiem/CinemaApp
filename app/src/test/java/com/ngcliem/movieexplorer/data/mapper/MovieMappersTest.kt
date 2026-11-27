@@ -46,10 +46,10 @@ class MovieMappersTest {
     }
 
     @Test
-    fun `favorite entity round trip keeps movie data`() {
+    fun `favorite round trip through Firestore data keeps movie data`() {
         val movie = testMovie(5)
 
-        val restored = movie.toEntity(addedAt = 123L).toDomain()
+        val restored = movie.toFavoriteData(addedAt = 123L).toFavoriteMovie()
 
         assertEquals(movie, restored)
     }

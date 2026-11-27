@@ -1,7 +1,8 @@
 package com.ngcliem.movieexplorer.domain.model
 
 data class User(
-    val id: Long,
+    /** Firebase uid. */
+    val id: String,
     val fullName: String,
     val email: String,
     val phone: String,

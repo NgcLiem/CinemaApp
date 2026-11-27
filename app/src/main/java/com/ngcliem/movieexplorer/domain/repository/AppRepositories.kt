@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import java.time.LocalDate
 
-/** Accounts are stored on the device (Room); the password is salted and hashed. */
+/** Accounts use Firebase Authentication; the profile is stored in Firestore. */
 interface AuthRepository {
 
     /** The signed-in user, or null when signed out. */
@@ -48,7 +48,7 @@ interface SearchHistoryRepository {
     fun clear()
 }
 
-/** Reviews written inside the app (stored locally). */
+/** Reviews written inside the app (stored in Firestore, visible to every user). */
 interface ReviewRepository {
 
     fun observeReviews(movieId: Int): Flow<List<Review>>

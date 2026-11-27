@@ -59,7 +59,7 @@ class MoviePagingSourceTest {
 
     @Test
     fun `network failure returns an error result`() = runTest {
-        val source = MoviePagingSource { throw IOException("offline") }
+        val source = MoviePagingSource(loadPage = { throw IOException("offline") })
         val pager = TestPager(config, source)
 
         val result = pager.refresh()

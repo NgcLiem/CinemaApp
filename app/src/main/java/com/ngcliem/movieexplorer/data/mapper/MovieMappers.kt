@@ -1,7 +1,6 @@
 package com.ngcliem.movieexplorer.data.mapper
 
 import com.ngcliem.movieexplorer.data.local.CachedMovieEntity
-import com.ngcliem.movieexplorer.data.local.FavoriteMovieEntity
 import com.ngcliem.movieexplorer.data.remote.dto.MovieDetailDto
 import com.ngcliem.movieexplorer.data.remote.dto.MovieDto
 import com.ngcliem.movieexplorer.data.remote.dto.ReviewDto
@@ -22,8 +21,8 @@ internal fun String?.toImageUrl(size: String): String? =
 
 fun MovieDto.toDomain(): Movie = Movie(
     id = id,
-    title = title,
-    overview = overview,
+    title = title.cleanText(),
+    overview = overview.cleanText(),
     posterUrl = posterPath.toImageUrl(POSTER_SIZE),
     backdropUrl = backdropPath.toImageUrl(BACKDROP_SIZE),
     releaseDate = releaseDate.orEmpty(),
@@ -32,64 +31,49 @@ fun MovieDto.toDomain(): Movie = Movie(
 
 fun MovieDetailDto.toDomain(): MovieDetail = MovieDetail(
     id = id,
-    title = title,
-    tagline = tagline?.takeIf { it.isNotBlank() },
-    overview = overview,
+    title = title.cleanText(),
+    tagline = tagline?.cleanText()?.takeIf { it.isNotBlank() },
+    overview = overview.cleanText(),
     posterUrl = posterPath.toImageUrl(POSTER_SIZE),
     backdropUrl = backdropPath.toImageUrl(BACKDROP_SIZE),
     releaseDate = releaseDate.orEmpty(),
     runtimeMinutes = runtime?.takeIf { it > 0 },
     voteAverage = voteAverage,
     voteCount = voteCount,
-    genres = genres.map { it.name },
+    genres = genres.map { it.name.cleanText() },
 )
 
-fun FavoriteMovieEntity.toDomain(): Movie = Movie(
-    id = id,
-    title = title,
-    overview = overview,
-    posterUrl = posterUrl,
-    backdropUrl = backdropUrl,
-    releaseDate = releaseDate,
-    voteAverage = voteAverage,
+/** A favorite as stored in Firestore at users/{uid}/favorites/{movieId}. */
+fun Movie.toFavoriteData(addedAt: Long = System.currentTimeMillis()): Map<String, Any?> = mapOf(
+    "id" to id,
+    "title" to title,
+    "overview" to overview,
+    "posterUrl" to posterUrl,
+    "backdropUrl" to backdropUrl,
+    "releaseDate" to releaseDate,
+    "voteAverage" to voteAverage,
+    "addedAt" to addedAt,
 )
 
-/** Used when the device is offline: shows the data saved with the favorite. */
-fun FavoriteMovieEntity.toDetail(): MovieDetail = MovieDetail(
-    id = id,
-    title = title,
-    tagline = null,
-    overview = overview,
-    posterUrl = posterUrl,
-    backdropUrl = backdropUrl,
-    releaseDate = releaseDate,
-    runtimeMinutes = null,
-    voteAverage = voteAverage,
-    voteCount = 0,
-    genres = emptyList(),
-)
-
-fun Movie.toEntity(
-    userId: Long = 0,
-    addedAt: Long = System.currentTimeMillis(),
-): FavoriteMovieEntity =
-    FavoriteMovieEntity(
-        userId = userId,
+/** Reads a favorite back; Firestore returns every number as Long or Double. */
+fun Map<String, Any?>.toFavoriteMovie(): Movie? {
+    val id = (this["id"] as? Number)?.toInt() ?: return null
+    return Movie(
         id = id,
-        title = title,
-        overview = overview,
-        posterUrl = posterUrl,
-        backdropUrl = backdropUrl,
-        releaseDate = releaseDate,
-        voteAverage = voteAverage,
-        addedAt = addedAt,
+        title = (this["title"] as? String).orEmpty().cleanText(),
+        overview = (this["overview"] as? String).orEmpty().cleanText(),
+        posterUrl = this["posterUrl"] as? String,
+        backdropUrl = this["backdropUrl"] as? String,
+        releaseDate = (this["releaseDate"] as? String).orEmpty(),
+        voteAverage = (this["voteAverage"] as? Number)?.toDouble() ?: 0.0,
     )
+}
 
 fun ReviewDto.toDomain(): Review = Review(
     id = id,
-    author = authorDetails?.name?.takeIf { it.isNotBlank() } ?: author,
+    author = (authorDetails?.name?.takeIf { it.isNotBlank() } ?: author).cleanText(),
     rating = authorDetails?.rating,
-    content = content.trim(),
+    content = content.cleanText(),
     createdAt = createdAt.orEmpty().take(10),
     // TMDB sometimes stores a full Gravatar URL here, prefixed with "/".
     avatarUrl = authorDetails?.avatarPath?.let { path ->
@@ -111,8 +95,8 @@ fun Movie.toCached(category: String, position: Int) = CachedMovieEntity(
 
 fun CachedMovieEntity.toDomain() = Movie(
     id = id,
-    title = title,
-    overview = overview,
+    title = title.cleanText(),
+    overview = overview.cleanText(),
     posterUrl = posterUrl,
     backdropUrl = backdropUrl,
     releaseDate = releaseDate,

@@ -94,7 +94,7 @@ fun MembershipScreen(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
-            MemberCard(name = user.fullName, memberId = "MX%06d".format(user.id), tier = stats.tier)
+            MemberCard(name = user.fullName, memberId = "MX" + user.id.take(6).uppercase(), tier = stats.tier)
             TierProgressCard(stats = stats)
 
             Text(stringResource(R.string.tiers_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
